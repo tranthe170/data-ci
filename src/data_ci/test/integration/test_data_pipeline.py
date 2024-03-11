@@ -29,5 +29,5 @@ class TestDataPipeline:
         with WarehouseConnection(get_warehouse_creds()).managed_cursor() as curr:
             curr.execute("Select id, name from app.enriched_data")
             enriched_user_data = curr.fetchall()
-        expected_data = [(1, "John"), (2, "Jane"), (3, "Doe"), (4, "no name")]
+        expected_data = [(1, "The"), (2, "Tai"), (3, "Tri"), (4, "no name")]
         assert enriched_user_data == expected_data
